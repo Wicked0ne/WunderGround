@@ -1,0 +1,6 @@
+<?php
+/*
+ * get api key from http://www.wunderground.com/weather/api/
+ * Copy this file to config.php
+*/
+define("APIKEY", 'APIKEYGOESHERE');
