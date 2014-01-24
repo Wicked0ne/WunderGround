@@ -25,8 +25,16 @@ $weather = $wunderground->getForcstFromZipCode($location);
 //$weather = $wunderground->getForcastFromLatLong($location);
 
 
-//just an example of how to get some data
-echo "Temp in F: " . $weather->getTemp_F() . "\r\n";
+/*just an example of how to get some data. This is not ideal but will work for now. If we get an array back
+ *that means there was a error.
+ */
+if (is_array($weather)) {
+    //nothing found and we got a error
+    echo $weather['error_msg'];
+} else {
+    echo "Temp in F: " . $weather->getTemp_F() . "\r\n";
+}
+
 
 //full object dump
 print_r($weather);
