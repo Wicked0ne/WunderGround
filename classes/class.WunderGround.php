@@ -104,7 +104,7 @@ class WunderGround
      * @param $zipcode string US Zipcode in format of 12345 or 12345-1234
      * @return array|WeatherForcast If zipcode is found it returns a WeatherForcast object else it returns an error array
      */
-    public function getForcstFromZipCode($zipcode)
+    public function getWeatherFromZipCode($zipcode)
     {
         //this checks for zipcodes i the form of 12345 or 12345-1234
         if (preg_match("/^([0-9]{5})(-[0-9]{4})?$/i", trim($zipcode))) {
@@ -122,7 +122,7 @@ class WunderGround
      * @param $cityState string Expects city and state in the following formats: city st, city,st, city, st
      * @return array|WeatherForcast If a city,st is found it returns a WeatherForcast object else it returns an error array
      */
-    public function getForcstFromCityState($cityState)
+    public function getWeatherFromCityState($cityState)
     {
         $loc = $this->checkForCityState($cityState);
 
@@ -141,7 +141,7 @@ class WunderGround
      * @param $long string Longitude
      * @return array|WeatherForcast If both params are floats it returns a WeatherForcast object else it returns an error array
      */
-    public function getForcastFromLatLong($lat, $long)
+    public function getWeatherFromLatLong($lat, $long)
     {
         //this checks for zipcodes i the form of 12345 or 12345-1234
         if (is_float(floatval($lat)) and is_float(floatval($long))) {

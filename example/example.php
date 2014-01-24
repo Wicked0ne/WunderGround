@@ -12,17 +12,18 @@
 require_once('../classes/class.WunderGround.php');
 
 //location...duh
-$location = "02127";
-//$location = "boston, ma";
-//$location = "42.338562,-71.03538";
+$zipcode = "02127";
+//$citystate = "boston, ma";
+//$lat = "42.338562";
+//$long= "-71.03538";
 
 //get Wunderground object
 $wunderground = new WunderGround();
 
 //populate wunderground object with weather data
-$weather = $wunderground->getForcstFromZipCode($location);
-//$weather = $wunderground->getForcstFromCityState($location);
-//$weather = $wunderground->getForcastFromLatLong($location);
+$weather = $wunderground->getWeatherFromZipCode($zipcode);
+//$weather = $wunderground->getWeatherFromCityState($citystate);
+//$weather = $wunderground->getWeatherFromLatLong($lat, $long);
 
 
 /*just an example of how to get some data. This is not ideal but will work for now. If we get an array back
