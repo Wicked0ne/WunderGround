@@ -1,4 +1,4 @@
-A simple php wrapper to the wunderground.com's weather api's.
+A simple php wrapper to the wunderground.com's weather api's. Not fully implemented.
 
 You will need your own api key which you can get here: http://www.wunderground.com/weather/api/.
 
